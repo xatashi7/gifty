@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gifty</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #5e35b1;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .gift-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .gift-item {
+            display: flex;
+            align-items: center;
+            padding: 18px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .gift-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+        .gift-checkbox {
+            width: 22px;
+            height: 22px;
+            margin-right: 18px;
+            cursor: pointer;
+            accent-color: #7e57c2;
+        }
+        .gift-text {
+            flex: 1;
+            font-size: 18px;
+            color: #37474f;
+            font-weight: 500;
+        }
+        .gift-link {
+            color: #7e57c2;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+        .gift-link:hover {
+            background-color: rgba(126, 87, 194, 0.1);
+            text-decoration: none;
+        }
+        .done {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        /* Wystarczy wpisać kolejne prezenty w ten sposób:
+        <li class="gift-item">
+            <input type="checkbox" class="gift-checkbox">
+            <span class="gift-text">Nazwa prezentu <a href="https://link.pl" target="_blank" class="gift-link">link</a></span>
+        </li>
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gifty</h1>
+        <ul class="gift-list">
+            <!-- SKOPIUJ TEMPLATE i wpisz swoje dane -->
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">tweezers <a href="https://www.jbprince.com/products/jb-pince-straight-tip-tweezers-10-inches-length?variant=45289187213560" target="_blank" class="gift-link">link</a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">termometr <a href="https://www.mediaexpert.pl/agd-male/akcesoria-kuchenne/termometry-do-zywnosci/termometr-do-zywnosci-kinghoff-kh-1149" target="_blank" class="gift-link">link
+                </a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">łyżka <a href="https://www.thekitchenlab.pl/p/the-perfect-spoon-silver-spoon-01-gestura/?country=PL" target="_blank" class="gift-link">link
+                </a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">łyżka 2 <a href="https://www.jbprince.com/products/gray-kunz-sauce-spoon?variant=45273853362424" target="_blank" class="gift-link">link
+                </a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">tarka  <a href="https://zlotywidelec.pl/pl/p/Microplane-najostrzejsza-TARKA-premium-zester-after-dark-grey./10744" target="_blank" class="gift-link">link
+                </a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">miski <a href="https://www.amazon.pl/Chuner-R%C3%BChrsch%C3%BCssel-Kuchennych-Nierdzewnej-Pojemno%C5%9Bci/dp/B0BRC3Y271?dib=eyJ2IjoiMSJ9.IAIYgEFyeH60gDNQFnmxtqk8gqI3DpFlOOK-76ZuPpmnKjMI9om5p3wAsz4oz47dhPN-rTKJD9HdF3hNrHlzDxOX4E_mbS_tVFddv64-0rgf6qPR7NB_vCNRD-Cp0c3ECH-Hhj4tUIG1mD8t5aiOAugjf1IyXrZnrUDnkfg9TnYq75KIB40xpmNEOoQuynoR3arlX5rLJmUp5uz7WLz2K4WFly3oel8K6R5-7oOD_2CFMGaa6ePRZSUwhkNwoBUZHaWuc9xh6OUiEWl1W7PxgHMpniVrtYfp5ipb71-eW24.QrtoJ4_Lo2nGoDg70eTNj3VRj0DOL7bVZNQuEMpeA9A&dib_tag=se&keywords=zestaw+misek+ze+stali+nierdzewnej&qid=1767626000&sr=8-9" target="_blank" class="gift-link">link
+                </a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">palnik <a href="https://allegro.pl/oferta/palnik-gazowy-lutlampa-auto-zaplon-gazu-na-piezo-opalarka-na-gaz-4xkartusz-18151919029?bi_s=ads&bi_m=productlisting:desktop:query&bi_c=ZTVlYWE0ODgtYjQ4My00YjI5LWIwZTYtZmQzMzIxM2JmOGUyAA&bi_t=ape&referrer=proxy&emission_unit_id=c16b478f-dc7b-4e1a-924f-9978ab03162f" target="_blank" class="gift-link">link
+                </a></span>
+
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">neko <a href="https://przepisychinskie.pl/biala-podstawka-na-paleczki-motyw-kotka-maneki-neko" target="_blank" class="gift-link">link
+                </a></span>
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">deli <a href="https://www.amazon.com/AOZITA-Containers-Airtight-Dishwasher-Microwave/dp/B0CSJZ48HS?dib=eyJ2IjoiMSJ9.zhG-AZ5PGWZjkOADZT9lnkrPZVHcISC_el0XawktpF7DnStJ8xoTdVGPERzn-XuCN22VCPm7O_5Xnox8Us3qHz3gWCoZ2I_D_VLVMtq8oG-cdUWJ4trvRPPh1sdohI4wDo67dkxdxiQJg6f58VpX0852JvaEwXDeJmhmqbgNWcYAA8hmeiDJqE_vhzP9o7TFWnc0GiaiJUo5WaazI5DGC_FMA8uRBmHP67-ywze0HtTGfiPXQ--s4moPVz1145Eo96D1Fp7fuWmtWDv0eP9uijGtjXar99i2oh9tjvqjtYk.DlLI-jOpyHHufe-X_0_tpT0dQQUY3-_IjSea024hQFQ&dib_tag=se&keywords=deli%2Bcontainers&qid=1767626319&sr=8-7&th=1" target="_blank" class="gift-link">link
+                </a></span>
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">talerz <a href="https://www.e-manufaktura.com/en_US/p/Plate-19%2C5-cm-GU814DEK42-Boleslawiec-Pottery/2353" target="_blank" class="gift-link">link
+                </a></span>
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">talerz 2 <a href="https://porcelana.pl/talerz-plytki-19-cm-alaska-hellen-g540.html" target="_blank" class="gift-link">link
+                </a></span>
+            <li class="gift-item">
+                <input type="checkbox" class="gift-checkbox">
+                <span class="gift-text">talerz 3 <a href="https://porcelana.pl/talerz-gleboki-23-cm-art-lu34-ke30.html" target="_blank" class="gift-link">link
+                </a></span>
+            </li>
+            <!-- KONIEC TEMPLATE -->
+        </ul>
+    </div>
+
+    <script>
+        // Automatyczne przekreślanie po zaznaczeniu checkboxa
+        document.querySelectorAll('.gift-checkbox').forEach(cb => {
+            cb.addEventListener('change', e => {
+                const text = e.target.nextElementSibling;
+                text.classList.toggle('done', e.target.checked);
+            });
+        });
+    </script>
+</body>
+</html>
